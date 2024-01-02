@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 100%;
+    scroll-behavior:smooth ;
+
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Kalnia', serif;
+    background-color: rgb(225, 244, 244);
+}
+
+/* section  */
+#menu-container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#menu-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Assests/images/bundo-kim-Pb9bUzH1nD8-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: brightness(50%);
+}
+#menu-content{
+    position: absolute;
+}
+#menu-content h1{
+    font-family: 'Rubik Scribble',san-serif;
+    color: #fff;
+    font-size: 6rem;
+}
+#menu-content p{
+    font-family: 'Playfair Display', serif;
+    color: #f3f4f7;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    text-shadow: 5px -5px 10px #fff;
+}
+#menu-box{
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+}
+.btn1{
+    width: 300px;
+    padding: 20px;
+    font-size: 2rem;
+    background-color: green;
+    color: #fff;
+    border-radius: 10px 30px 40px 50px ;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow .5s, width .5s;
+}
+.btn1:hover{
+    box-shadow: 5px 5px 10px #fff;
+    width: 350px;
+}
+.btn2{
+    width:300px;
+    padding: 20px;
+    font-size: 2rem;
+    background-color: red;
+    color: #fff;
+    border-radius: 30px 10px 50px 40px ;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow .5s, width .5s;
+    
+}
+.btn2:hover{
+    box-shadow: 5px 5px 10px #fff;
+    width: 350px;
+}
+
+
+/*------------------------------*/
+/* Header Section */
+#header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 40px;
+    /* height: 70px; */
+    line-height: 70px;
+}
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.9);
+}
+#navbar h1{
+    font-family: 'Kalnia', serif;
+    color: #fff;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 5px #000;
+    
+}
+
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+    padding: 3px 15px 3px 15px;
+    cursor: pointer;
+    transition: padding .6s;
+}
+#navbar ul li:hover{
+    background: rgb(0, 0, 0,0.6);
+    padding: 0 30px 0 30px;
+    box-shadow: 2px 2px 15px #fff;
+    border-radius: 50px 20px 40px 30px ;
+}
+#navbar ul li a{
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* For Mobile Display */
+#mobile-menu{
+    display: none;
+    height: 50px;
+    line-height: 50px;
+    background-color:#070707;
+}
+#mobile-menu ul{
+    display: flex;
+    justify-content: center;
+
+}
+#mobile-menu ul li{
+    list-style: none;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: padding .5s,box-shadow .6s;
+}
+#mobile-menu ul li:hover{
+    background: rgb(0, 0, 0,0.6);
+    padding: 0 20px 0 20px;
+    box-shadow: 2px 2px 15px #fff;
+    border-radius: 50px 20px 40px 30px;
+}
+#mobile-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+/* Veg */
+#veg,#non-veg{
+    padding-top: 50px;
+    /* border: 1px solid #000; */
+    margin-top: 50px;
+    margin-right: 5px;
+    margin-left: 5px;
+    /* background-color: rgb(61, 212, 212); */
+}
+
+#section{
+    padding:25px 0 25px 0;
+    text-align: center;
+    font-size: 3rem;
+    
+}
+
+/* menu Section */
+#veg-row,#non-veg-row{
+    display: flex;
+    padding: 10px 100px ;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 10px 5px;
+    /* background-color: aquamarine; */
+    background-image: url(../Assests/images/hero-slider-1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#veg-row h2,#non-veg-row h2{
+    text-align: center;
+    font-size: 3rem;
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+    font-family: cursive;
+}
+#veg-col,#non-veg-col{
+    box-shadow: 2px 2px 15px #bbb;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    margin-top: 5px;
+    width: 100%;
+    background-color: #e7d4d49c;
+}
+.box{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 5px;
+    margin: 5px 10px;
+    align-items: center;
+    text-align: center;
+    background: #cbc9c9;
+}
+
+#image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* padding: 5px; */
+    border: 2px solid #bbb;
+}
+#image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;  
+}
+.item-name h3{
+    font-size: 2rem;
+    font-family: 'Lora', serif;
+}
+.item-name p{
+    font-size: 20px;
+    font-family: 'Sevillana', cursive;
+}
+.price{
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+/* footer */
+#footer{
+    background-color: #292929;
+    padding: 20px;
+    position: relative;
+}
+#footer h5{
+    text-align: center;
+    color: antiquewhite;
+}
+#footer h5 a{
+    text-decoration: none;
+    color: #fff;
+}
+#top{
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 786px){
+    #mobile-menu{
+        display: block;
+    }
+    #navbar ul{
+        display: none;
+    }
+    html{
+        font-size: 90%;
+    }
+    #restro-content h1{
+        font-size: 4rem;
+    }
+    #mobile-menu ul li a{
+        font-size: .8rem;
+    }
+    .btn1,.btn2{
+        width: 150px;
+        font-size: 1.2rem;
+    }
+    .btn1:hover,.btn2:hover{
+        width: 150px;
+    }
+    #section{
+        font-size: 2rem;
+    }
+    #veg-row,#non-veg-row{
+        padding: 10px 10px;
+    }
+    #veg-row h2,#non-veg-row h2{
+        font-size: 1.5rem;
+    }
+    .box{
+        padding: 5px 10px;
+    }
+    #image{
+        width: 100px;
+        height: 100px;
+    }
+    .item-name h3{
+        font-size: 1.5rem;
+    }
+    .item-name p{
+        font-size: 15px;
+    }
+    .price{
+        font-size: .9rem;
+    }
+
+}
+
+@media screen and (max-width: 360px){
+    html{
+        font-size: 60%;
+    }
+    #restro-content h1{
+        font-size: 4rem;
+    }
+    #restro-content p{
+        font-size: 1.5rem;
+    }
+    #mobile-menu ul li a{
+        font-size: .8rem;
+    }
+    .btn1{
+        width: 100px;
+        font-size: 1rem;
+    }
+    .btn2{
+        width: 100px;
+        font-size: 1rem;
+    }
+    .btn1:hover,.btn2:hover{
+        width: 100px;
+    }
+    #section{
+        font-size: 1.7rem;
+    }
+    #veg-row h2,#non-veg-row h2{
+        font-size: 1.3rem;
+    }
+    #image{
+        width: 50px;
+        height: 50px;
+    }
+    .item-name h3{
+        font-size: 1.3rem;
+    }
+    .item-name p{
+        font-size: 13px;
+    }
+    .price{
+        font-size: .8rem;
+    }
+
+}

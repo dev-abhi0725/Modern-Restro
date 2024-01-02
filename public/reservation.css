@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 100%;
+    scroll-behavior:smooth ;
+
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Kalnia', serif;
+    background-color: azure;
+    height: 100vh;
+}
+#header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 40px;
+    /* height: 70px; */
+    line-height: 70px;
+}
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.9);
+}
+#navbar h1{
+    font-family: 'Kalnia', serif;
+    color: #fff;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 5px #000;
+    
+}
+
+#navbar ul{
+    display: flex;
+    /* gap: 10px; */
+    /* list-style: none; */
+}
+#navbar ul li{
+    list-style: none;
+    padding: 3px 15px 3px 15px;
+    cursor: pointer;
+    transition: padding .6s;
+}
+#navbar ul li:hover{
+    background: rgb(0, 0, 0,0.6);
+    padding: 0 30px 0 30px;
+    box-shadow: 2px 2px 15px #fff;
+    border-radius: 50px 20px 40px 30px ;
+}
+#navbar ul li a{
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* For Mobile Display */
+#mobile-menu{
+    display: none;
+    height: 40px;
+    line-height: 40px;
+    background-color:#070707;
+}
+#mobile-menu ul{
+    display: flex;
+    justify-content: center;
+
+}
+#mobile-menu ul li{
+    list-style: none;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: padding .5s,box-shadow .6s;
+}
+#mobile-menu ul li:hover{
+    background: rgb(0, 0, 0,0.6);
+    padding: 0 20px 0 20px;
+    box-shadow: 2px 2px 15px #fff;
+    border-radius: 50px 20px 40px 30px;
+}
+#mobile-menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+
+
+
+
+.banner{
+    /* padding-top: 160px; */
+    /* height: 94vh; */
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,.6)),url(../Assests/images/banner.webp) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 20px;
+
+}
+.banner h2{
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+    font-size: 60px;
+    font-family: 'Rubik Scribble',san-serif;
+    text-align: center;
+}
+.card-content{
+    /* border: 3px solid #000; */
+    border-radius:50px;
+    background-color: #292929;
+    box-shadow: 25px 25px 80px #000;
+    height: 300px;
+}
+.card-content h3{
+    text-align: center;
+    padding: 40px 0 10px 0;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 5px 5px 12px #fff;
+    font-family: 'Playfair Display', serif;
+}
+.form-row{
+    display: flex;
+    /* flex-direction: column; */
+    width: 95%;
+    margin: 0 auto;
+
+}
+form select,form input{
+    display: block;
+    width: 100%;
+    margin: 15px 12px ;
+    padding: 5px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+form input[type=text], form input[type=number],input::placeholder,select{
+    color: #080808;
+}
+form input[type=submit]{
+    color: #fff;
+    background: #f2745f;
+    padding: 12px 0 ;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 786px){
+    #mobile-menu{
+        display: block;
+    }
+    #navbar ul{
+        display: none;
+    }
+    html{
+        font-size: 90%;
+    }
+    #restro-content h1{
+        font-size: 4rem;
+    }
+    #mobile-menu ul li a{
+        font-size: .8rem;
+    }
+    
+    .banner{
+        padding-top: 220px;
+    }
+    .form-row{
+        flex-wrap: wrap;
+    }
+    .banner h2{
+        font-size: 35px;
+    }
+    .card-content{
+        /* height: 300px; */
+        width: 300px;
+    }
+    .card-content h3{
+        padding-top: 10px;
+        font-size: 25px;
+    }
+    form select,form input{
+        margin: 5px 6px ;
+        padding: 3px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 360px){
+    html{
+        font-size: 60%;
+    }
+    #restro-content h1{
+        font-size: 4rem;
+    }
+    #restro-content p{
+        font-size: 1.5rem;
+    }
+    #mobile-menu ul li a{
+        font-size: .8rem;
+    }
+    .banner h2{
+        font-size: 30px;
+    }
+    .card-content{
+        height: auto;
+        width: 200px;
+    }
+    .card-content h3{
+        font-size: 20px;
+    }
+}
